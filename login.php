@@ -56,8 +56,8 @@
 		{
 			// append user variables to session
 			$_SESSION['user_id'] = $row['user_id'];
-			$_SESSION['firstname'] = $row['firstname'];
-			$_SESSION['lastname'] = $row['lastname'];
+			$_SESSION['firstname'] = $row['first'];
+			$_SESSION['lastname'] = $row['last'];
 			
 			// redirect user to profile page
 			header("Location: index.php");

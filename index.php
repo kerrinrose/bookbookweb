@@ -24,6 +24,6 @@
 		<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
-		<p>O Hai!</p>
+		<p><?php echo "{$_SESSION['firstname']}"; ?></p>
 	</body>
 </html>
