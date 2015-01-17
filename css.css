@@ -1,0 +1,13 @@
+body{
+	background-image:url('photos/textured_paper.png');
+}
+h1{
+	margin: 0px;
+	padding-bottom: 5px;
+}
+p{
+	margin: 0px;
+}
+.panel{
+	background-image:url('photos/handmadepaper.png');
+}
