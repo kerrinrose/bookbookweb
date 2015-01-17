@@ -1,2 +1,2 @@
 # bookbookweb
-Local market for books.
+Local market of books
