@@ -16,13 +16,13 @@ if(isset($_POST['submit']))
 	$error = array();
 
 	// check for a firstname
-	if(empty($_POST['isbn']))
+	if(empty($_POST['data']))
 	{
-		$error['isbn'] = 'Required field';
+		$error['data'] = 'Required field';
 	}
     
     // redirect user to profile page
-    header("Location: sellablebooks.php?isbn={$_POST['isbn']}");
+    header("Location: sellablebooks.php?type={$_POST['type']}&data={$_POST['data']}");
     exit();
 }
 
@@ -55,15 +55,23 @@ if(isset($_POST['submit']))
 			<form method="post" action="sell.php">
 				
 				<!-- first name -->
+                
+                <div class="form-group">
+					<select name="type" class="form-control">
+                        <option value="isbn">ISBN #</option>
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                    </select>
+				</div>
+                
 				<div class="form-group">
-					<label>ISBN</label>
-					<input name="isbn" type="text" value="ISBN #" class="form-control" />
-					<span class="text-danger"><?php echo $error['isbn']; ?></span>
+					<input name="data" type="text" class="form-control" />
+					<span class="text-danger"><?php echo $error['data']; ?></span>
 				</div>
 				
 				<!-- submit button -->
 				<div class="form-group">
-					<input name="submit" type="submit" value="Sign up" class="btn btn-primary" />
+					<input name="submit" type="submit" value="Search" class="btn btn-primary" />
 				</div>
 				
 			</form>
