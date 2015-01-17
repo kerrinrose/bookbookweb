@@ -105,53 +105,57 @@ if(isset($_POST['submit']))
 		<link rel="stylesheet" href="css.css">			
 	</head>
 	<body>
+        
+        <div id="header">
+		<img src="photos/bookbook-logo.png" width="30%">
+		</div>
 		
 		<!-- content -->	
-		<div class="container" style="margin-top:65px;background-color:white;border-radius:5px;">
-		
+		<div class="container" style="margin-top:65px;background: none;border-radius:5px;">
+		<div class="col-md-6 col-md-offset-3">   
 			<h2>Sign up</h2>
 
 			<!-- signup form -->
-			<form method="post" action="signup.php">
+			<form method="post" class="form-style sign-up" action="signup.php" >
 				
 				<!-- first name -->
 				<div class="form-group">
 					<label>First Name</label>
-					<input name="firstname" type="text" value="<?php echo $_POST['firstname']; ?>" class="form-control" />
+					<input name="firstname" type="text" value="<?php echo $_POST['firstname']; ?>" class="form-control input-style" />
 					<span class="text-danger"><?php echo $error['firstname']; ?></span>
 				</div>
 							
 				<!-- last name -->
 				<div class="form-group">
 					<label>Last Name</label>
-					<input name="lastname" type="text" value="<?php echo $_POST['lastname']; ?>" class="form-control" />
+					<input name="lastname" type="text" value="<?php echo $_POST['lastname']; ?>" class="form-control input-style" />
 					<span class="text-danger"><?php echo $error['lastname']; ?></span>
 				</div>
 				
 				<!-- e-mail -->
 				<div class="form-group">
 					<label>E-mail</label>
-					<input name="email" type="text" value="<?php echo $_POST['email']; ?>" class="form-control" />
+					<input name="email" type="text" value="<?php echo $_POST['email']; ?>" class="form-control input-style" />
 					<span class="text-danger"><?php echo $error['email']; ?></span>
 				</div>
 				
 				<!-- password -->
 				<div class="form-group">
 					<label>Password</label>
-					<input name="userpass" type="password" class="form-control" />
+					<input name="userpass" type="password" class="form-control input-style" />
 					<span class="text-danger"><?php echo $error['userpass']; ?></span>
 				</div>
 				
 				<!-- submit button -->
 				<div class="form-group">
-					<input name="submit" type="submit" value="Sign up" class="btn btn-primary" />
+					<input name="submit" type="submit" value="Sign up" class="btn btn-primary sub-style" />
 				</div>
 				
 			</form>
 			
 			<!-- sign in link -->
 			<p>Already have an account? <a href="index.php">Sign in</a>!</p>
-			
+            </div>
 		</div>
 	
 	</body>

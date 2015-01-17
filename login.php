@@ -80,44 +80,49 @@
 		<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
-		<div id="header" style="text-align:center;background-color:rgba(0,0,55,0.3);color:white;margin-bottom:60px;">
-			<h1 style="font-size:4em;margin:0px;padding:10px;">BookBook</h1>
+		<div id="header">
+		<img src="photos/bookbook-logo.png" width="30%">
 		</div>
 		<div class="container">
 			<div class="col-md-4">
 
 				<!-- sign up link -->
-				<p style="font-size:.7em;color:grey;margin-bottom:10px;">Don't already have an account? <a href="signup.php">Sign up</a>!</p>
+			
 		
-				<div id="emailsignup" style="background-color:grey;padding:8px 10px 1px 10px;border-radius:5px;">
+				<div id="emailsignup" class="form-style">
 					<form method="post" action="login.php">
 						
 						<!-- email -->
 						<div class="form-group">
 							<label>Email</label><br />
-							<input name="email" type="text" value="<?php echo $_POST['email']; ?>" class="form-control" />
+							<input name="email" type="text" value="<?php echo $_POST['email']; ?>" class="form-control input-style" />
 							<span class="text-danger"><?php echo $error['email']; ?></span>
 						</div>
 						
 						<!-- password -->
 						<div class="form-group">
 							<label for="password">Password</label><br />
-							<input id="password" name="userpass" type="password" class="form-control" value="<?php echo $error['userpass']; ?>" />
+							<input id="password" name="userpass" type="password" class="form-control input-style" value="<?php echo $error['userpass']; ?>" />
 							<span class="text-danger"><?php echo $error['userpass']; ?></span>
 						</div>
 						
 						<!-- submit button -->
 						<div class="form-group">
-							<input name="submit" type="submit" value="Sign in" class="btn btn-primary" />
+							<input name="submit" type="submit" value="Sign in" class="btn btn-primary sub-style" />
 						</div>
 
+                        
 					</form>
 				</div>
+                
+                	<p style="font-size:1.3em;color:grey;margin-top:10px;">Don't already have an account? <a href="signup.php">Sign up</a>!</p>
 			</div>
 
 			<div class="col-md-8">
-				<h1 style="margin-top:0px;">Welcome to BookBook!<h1>
-				<h2 style="margin-top:0px;font-weight:100;">Searching for books?<br>Start searching your local neighborhood!</h2>
+                <h1 style="margin-top:0px;">Welcome to bookbook!</h1>
+			<p style="font-weight: 200; font-size: 24pt; line-height: 52px;">Searching for books?</br>
+Looking to sell?<br />
+Start searching your local neighborhood!</p>
 			</div>
 
 		</div>

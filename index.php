@@ -33,7 +33,12 @@
 		<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
-		<p><?php echo "{$_SESSION['firstname']} "; echo "{$_SESSION['lastname']}";?></p>
+        
+        <div id="header">
+		<img src="photos/bookbook-logo.png" width="30%">
+            <p>Welcome <?php echo "{$_SESSION['firstname']} "; echo "{$_SESSION['lastname']}";?></p>
+		</div>
+		
         <p>Do you want to buy or sell your book?</p>
         <a href="sell.php">Sell</a>
         <a href="buy.php">Buy</a>

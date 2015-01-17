@@ -1,5 +1,20 @@
 body{
-	background-image:url('photos/textured_paper.png');
+	background:url('photos/linedpaper.png') #fff repeat;
+    font-family: "Open Sans";
+  
+}
+
+a {
+    
+ color: #f1b029;
+    font-weight: bold;
+    
+}
+
+a:hover {
+    
+ color: #000;
+    text-decoration: none;
 }
 hr{
 	margin: 0px;
@@ -17,4 +32,60 @@ img{
 }
 .panel{
 	background-image:url('photos/handmadepaper.png');
+}
+
+.input-style {
+ background-color: #fff;  
+    border-radius: 0px;
+    box-shadow: 0px;
+    border: 0;
+}
+
+.input-style:focus {
+    
+     outline: 0;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    border: 2px solid #000;
+    
+   
+}
+
+.sub-style {
+    border: 0px;
+ border-radius: 0px;
+    background-color: #000;
+    padding: 10px 15px;
+}
+.sub-style:hover {
+ background-color: #686868;   
+}
+
+#header {
+ 	-webkit-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.2);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.2);
+	        box-shadow: 0 8px 6px -6px rgba(68,68,68,0.2);  
+    
+    text-align:center;
+    background-color: #fff;
+    
+    margin-bottom:60px;
+    
+}
+
+.form-style label {
+    
+ font-weight: 200;
+font-size: 16pt;
+    color: #000;
+}
+
+.form-style  {
+ background-color:#f1b029;padding:30px;   
+    
+}
+
+.sign-up {
+ background-color: #f9dc62;   
 }
