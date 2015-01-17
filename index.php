@@ -8,6 +8,15 @@
 
 	// connect to the database
 	$db = mysqli_connect ($db_host, $db_user, $db_password, $db_name) OR die ('Could not connect to MySQL: ' . mysqli_connect_error());
+
+    if(empty($_SESSION['user_id']))
+    {
+
+        // redirect user to profile page
+        header("Location: login.php");
+        exit();
+
+    } 
  
 ?>
  
@@ -24,6 +33,9 @@
 		<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
-		<p><?php echo "{$_SESSION['firstname']}"; ?></p>
+		<p><?php echo "{$_SESSION['firstname']} "; echo "{$_SESSION['lastname']}";?></p>
+        <p>Do you want to buy or sell your book?</p>
+        <a href="sell.php">Sell</a>
+        <a href="buy.php">Buy</a>
 	</body>
 </html>
